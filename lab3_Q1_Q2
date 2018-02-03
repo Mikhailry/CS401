@@ -1,0 +1,14 @@
+Lab 3
+
+Part1:
+Complexity in terms of Big-O for the following methods
+methodA: O(N^3)
+methodB: O(2N^2)
+methodC: O(N) 
+
+Part2:
+Sorting array of integers has complexity time complexity O(N^2).
+Timestamps displayed in console.
+
+Sorting of array of objects with Comparable interface has O(N log N) complexity.
+Timestamps displayed in console.
