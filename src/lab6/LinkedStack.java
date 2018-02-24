@@ -13,7 +13,7 @@ public class LinkedStack implements StackInterface{
 
     public void push(Object element) {
         // Places element at the top of this stack.
-        LLNode<Employee> newNode = new LLNode((Employee) element);
+        LLNode<Employee> newNode = new LLNode(element);
         newNode.setLink(top);
         top = newNode;
     }
