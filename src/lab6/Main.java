@@ -17,16 +17,16 @@ public class Main {
         System.out.println("##     ## ######## ##    ##  #######");
         System.out.println("=====================================");
 
-        System.out.println("1. +Read file (emp.txt) and push Employee obj on stack (LL)\n"
-                + "2. +Peek\n"
-                + "3. +Pop and show the top\n"
-                + "4. +Push and show the top\n"
+        System.out.println("1. Read file (emp.txt) and push Employee obj on stack (LL)\n"
+                + "2. Peek\n"
+                + "3. Pop and show the top\n"
+                + "4. Push and show the top\n"
                 + "5. Read file (emp.txt) and add Employee obj on queue (LL)\n"
-                + "6. +Read file (emp.txt) and Enqueue to Fixed front Array\n"
-                + "7. +Dequeue with Fixed front Array\n"
-                + "8. +Read file (emp.txt) and Enqueue to Floating front Array\n"
-                + "9. +Dequeue with Floating front Array\n"
-                + "0. +Exit program\n");
+                + "6. Read file (emp.txt) and Enqueue to Fixed front Array\n"
+                + "7. Dequeue with Fixed front Array\n"
+                + "8. Read file (emp.txt) and Enqueue to Floating front Array\n"
+                + "9. Dequeue with Floating front Array\n"
+                + "0. Exit program\n");
     }
 
     public static void main(String[] args) throws IOException {
@@ -50,8 +50,8 @@ public class Main {
         empFixedQueue = new FixedFrontArrayQueue<Employee>();
 
         //LinkedList queue
-        //QueueInterface empLLQueue;
-        //empLLQueue = new
+        QueueInterface empLLQueue;
+        empLLQueue = new LinkedQueue();
 
         Scanner input = new Scanner(System.in);
         while ((n = input.nextInt()) != 0) {
@@ -126,6 +126,26 @@ public class Main {
                     break;
 
                 case 5:
+                    //read emp.txt file
+                    File inpFile1 = new File("emp.txt");
+                    Scanner inpScanner1 = new Scanner(inpFile1);
+
+                    while (inpScanner1.hasNextLine()) {
+
+                        String nextLine1 = inpScanner1.nextLine();
+
+                        //splitting line into parts and writing to array
+                        String [] empAttr = nextLine1.split(" ");
+
+                        //instantiating new Employee
+                        Employee employee = new Employee(Integer.parseInt(empAttr[1]), empAttr[0]);
+
+                        //adding instantiated employee to the queue
+                        empLLQueue.enqueue(employee);
+
+                    } //end of while loop
+
+                    System.out.println("Done! Employees have been added to the LinkedList.\n");
 
                     mn1.showMenu();
                     break;

@@ -13,7 +13,7 @@ public class LinkedQueue implements QueueInterface{
     }
 
     @Override
-    public void enqueue(Object element) throws NoSuchElementException {
+    public void enqueue(Object element) {
         LLNode<Employee> newNode = new LLNode(element);
         if (rear == null)
             front = newNode;
@@ -25,22 +25,35 @@ public class LinkedQueue implements QueueInterface{
     }
 
     @Override
-    public Object dequeue() throws NoSuchElementException {
-        return null;
+    public Object dequeue() {
+        if (isEmpty())
+            throw new NoSuchElementException("Dequeue attempted on empty queue.");
+        else
+        {
+            Employee element;
+            element = front.getInfo();
+            front = front.getLink();
+            if (front == null)
+                rear = null;
+            numElements--;
+            return element;
+        }
     }
 
     @Override
     public boolean isFull() {
+        // Returns false – a linked queue is never full.
         return false;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return (numElements==0);
     }
 
     @Override
     public int size() {
-        return 0;
+        //returns size of queue
+        return numElements;
     }
 }
