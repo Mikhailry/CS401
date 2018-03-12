@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -23,11 +24,8 @@ public class Main {
                 + "2. Sort employee items by ID using Selection Sort method.\n"
                 + "3. Print employee items\n"
                 + "4. Search employee using Binary Search\n"
-                + "5. NA\n"
-                + "6. NA\n"
-                + "7. NA\n"
-                + "8. NA\n"
-                + "9. NA\n"
+                + "5. Convert infix expressions to postfix and print results\n"
+                + "6. Evaluate whether expression is a palindrome\n"
                 + "0. Exit program\n");
     }
 
@@ -110,9 +108,15 @@ public class Main {
                     int first=0;
                     int last=0;
 
-                    System.out.println("Input target ID: ");
-                    Scanner sc1 = new Scanner(System.in);
-                    target = sc1.nextInt();
+                    try {
+                        System.out.println("Input target ID: ");
+                        Scanner sc1 = new Scanner(System.in);
+                        target = sc1.nextInt();
+                    }catch (IndexOutOfBoundsException exception) {
+                        System.out.print("IndexOutOfBounds\n");
+                    } catch (InputMismatchException exception) {
+                        System.out.print("InputMismatch\n");
+                    }
 
                     int k=empList1.length;
                     if (k>0) {
@@ -132,34 +136,63 @@ public class Main {
                     break;
 
                 case 5:
+                    String exp1 = "1+3*8";
+                    String exp2 = "8-3-4*6+3";
+                    String exp3 = "4*(5-(7+2))";
 
+                    //convert infix to postfix
+                    String exp1Conv = InfixToPostfix.infixToPostfix(exp1);
+                    String exp2Conv = InfixToPostfix.infixToPostfix(exp2);
+                    String exp3Conv = InfixToPostfix.infixToPostfix(exp3);
+
+                    //calculate result for postfix
+                    int exp1Res=PostFixEvaluator.evaluate(exp1Conv);
+                    int exp2Res=PostFixEvaluator.evaluate(exp2Conv);
+                    int exp3Res=PostFixEvaluator.evaluate(exp3Conv);
+
+                    System.out.println("For expression "+exp1+" Postfix expression is "+exp1Conv+" and result is "+exp1Res);
+                    System.out.println("For expression "+exp2+" Postfix expression is "+exp2Conv+" and result is "+exp2Res);
+                    System.out.println("For expression "+exp3+" Postfix expression is "+exp3Conv+" and result is "+exp3Res);
+                    System.out.println();
 
                     mn1.showMenu();
                     break;
 
                 case 6:
 
+                    String expression;
+                        System.out.println("Detect if String is a Palindrome.");
+                        System.out.println("Enter expression for evaluation: ");
+                        Scanner sc2 = new Scanner(System.in);
+                        expression = sc2.nextLine();
+                        boolean isPalindrome = Palindrome.palEval(expression);
+
+                        if (isPalindrome) {
+                            System.out.println("Expression you've entered is a palindrome.\n");
+                        } else {
+                            System.out.println("Expression you've entered is NOT a palindrome.\n");
+                        }
 
                     mn1.showMenu();
                     break;
 
-                case 7:
-
-
-                    mn1.showMenu();
-                    break;
-
-                case 8:
-
-
-                    mn1.showMenu();
-                    break;
-
-                case 9:
-
-
-                    mn1.showMenu();
-                    break;
+//                case 7:
+//
+//
+//                    mn1.showMenu();
+//                    break;
+//
+//                case 8:
+//
+//
+//                    mn1.showMenu();
+//                    break;
+//
+//                case 9:
+//
+//
+//                    mn1.showMenu();
+//                    break;
 
                 default:
                     mn1.showMenu();
