@@ -31,7 +31,6 @@ public class SortedLinkedList<T> extends LinkedList<Employee> {
                 current.setLink(newNode);
             } // end of else
 
-
     }//end of add method
 
 }
