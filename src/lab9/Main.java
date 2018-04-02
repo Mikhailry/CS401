@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
@@ -26,8 +28,8 @@ public class Main {
                 + "5. Part2: Add new employee (Mikhail3, 3333333) in a DoublyLinkedList at FRONT with 'public boolean add(Where where, T element)'.\n"
                 + "6. Part2: Add new employee (Mikhail4, 4444444) in a DoublyLinkedList in the MIDDLE with index== 4 with 'public boolean add(Where where, int index, T element)'.\n"
                 + "7. Part2: Search for employee (Mikhail4, 4444444) in a DoublyLinkedList with 'public boolean contains (T element)'.\n"
-                + "8. Part2: Remove employee at indeces==30,1,3 in a DoublyLinkedList with 'public T remove(int index)'.\n"
-                + "9. Part3: Build the Binary Search Tree.\n"
+                + "8. Part2: Remove employee at index==3 in a DoublyLinkedList with 'public T remove(int index)'.\n"
+                + "9. Part3: Add elements one by one to build Binary Search Tree and than rebuild it balanced.\n"
                 + "0. Exit program\n");
     }
 
@@ -48,6 +50,9 @@ public class Main {
         Employee emp2 = new Employee(2222222, "Mikhail2");
         Employee emp3 = new Employee(3333333, "Mikhail3");
         Employee emp4 = new Employee(4444444, "Mikhail4");
+
+        //instantiate BST
+        BinarySearchTree numbers = new BinarySearchTree();
 
         Main mn1 = new Main();
         mn1.showMenu();
@@ -151,7 +156,49 @@ public class Main {
                     break;
 
                 case 9:
+                    //4,10,12 15,18,22,24,31,35,44,50,66,70,90,25
+                    numbers.add(4);
+                    numbers.add(10);
+                    numbers.add(12);
+                    numbers.add(15);
+                    numbers.add(18);
+                    numbers.add(22);
+                    numbers.add(24);
+                    numbers.add(31);
+                    numbers.add(35);
+                    numbers.add(44);
+                    numbers.add(50);
+                    numbers.add(66);
+                    numbers.add(70);
+                    numbers.add(90);
+                    numbers.add(25);
 
+                    System.out.println("Min element is: " + numbers.min());
+                    System.out.println("Max element is: " + numbers.max());
+
+                    System.out.println("\nInorder traversal: ");
+                    numbers.getIterator(Order.Inorder);
+
+                    //balance tree
+                    //get size
+                    int size = numbers.size();
+                    //instantiate array of size == number of tree elements
+                    Integer [] num = new Integer[size];
+                    int index = 0;
+
+                    //put all tree elements into array in order
+                    Iterator iter = numbers.getIterator(Order.Inorder);
+                    while (iter.hasNext()) {
+                        num[index] = (int) iter.next();
+                        index++;
+                    }
+
+                    //instantiating new tree
+                    BinarySearchTree numbersBal = new BinarySearchTree<>();
+                    //building a balanced tree
+                    rebuildTree(numbersBal, num, 0, index-1);
+                    System.out.println();
+                    System.out.println("Tree was rebuild.");
 
                     mn1.showMenu();
                     break;
@@ -166,4 +213,21 @@ public class Main {
 
 
     }//end of main method
+
+    public static void rebuildTree(BinarySearchTree tree, Integer [] arr, int low, int high){
+        if (low==high){
+            tree.add(arr[low]);
+        }
+        else if ((low+1)==high) {
+            tree.add(arr[low]);
+            tree.add(arr[high]);
+        }
+        else {
+            int mid = (low+high)/2;
+            tree.add(arr[mid]);
+            rebuildTree(tree, arr, low, mid-1);
+            rebuildTree(tree, arr, mid+1, high);
+        }
+    }
+
 }
