@@ -1,7 +1,5 @@
 package lab9;
 
-import lab7.LinkedQueue;
-
 import java.util.Comparator;
 import java.util.Iterator;
 
