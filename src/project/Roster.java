@@ -36,7 +36,7 @@ public class Roster {
         studentsSites02 = 5;
         studentsSites03 = 5;
         totalClassSize = 20;
-        numberOfAssignments = 10;
+        numberOfAssignments = 12;
         numberOfProjects = 1;
         numberOfExams = 2;
         this.classNumber = classNumber;
@@ -57,25 +57,18 @@ public class Roster {
         this.classNumber = classNumber;
     }
 
-    public int getNumberOfAssignments() {
-        return numberOfAssignments;
-    }
+
+
+
 
     public void setNumberOfAssignments(int numberOfAssignments) {
         this.numberOfAssignments = numberOfAssignments;
-    }
-
-    public int getNumberOfProjects() {
-        return numberOfProjects;
     }
 
     public void setNumberOfProjects(int numberOfProjects) {
         this.numberOfProjects = numberOfProjects;
     }
 
-    public int getNumberOfExams() {
-        return numberOfExams;
-    }
 
     public void setNumberOfExams(int numberOfExams) {
         this.numberOfExams = numberOfExams;
