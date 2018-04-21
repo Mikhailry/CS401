@@ -1154,9 +1154,9 @@ public class Console {
         float midtermExamW = 0;
         float projectW = 0;
         float hwW = 0;
-        float quizW = 0;
-        float participationW = 0;
-        float extraPointsW = 0;
+//        float quizW = 0;
+//        float participationW = 0;
+//        float extraPointsW = 0;
         float totalWeightedScore = 0;
 
         //quantitative variables
@@ -1173,14 +1173,10 @@ public class Console {
             classN = students.get(i).getClassNumber();
 
             //get number of HW, Projects, exams for the class number from rosters
-            //temporary roster object
-            //Roster troster = new Roster("temp");
             numberOfHw = getNumberOfAssignmentsForClass(roster, classN);
             numberOfProj = getNumberOfProjectsForClass(roster, classN);
 
             //get weights for hw, projects, exams
-            //GradeItems tgrades = new GradeItems();
-
             hwW = getHwWForClass(gradeItems, classN);
             projectW = getProjectWForClass(gradeItems, classN);
             midtermExamW = getMidtermExamWForClass(gradeItems, classN);

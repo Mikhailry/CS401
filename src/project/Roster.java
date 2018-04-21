@@ -1,7 +1,5 @@
 package project;
 
-import java.util.ArrayList;
-
 public class Roster {
 
     protected int numberOfSites; //variable of number of course sites
@@ -57,28 +55,4 @@ public class Roster {
         this.classNumber = classNumber;
     }
 
-
-
-
-
-    public void setNumberOfAssignments(int numberOfAssignments) {
-        this.numberOfAssignments = numberOfAssignments;
-    }
-
-    public void setNumberOfProjects(int numberOfProjects) {
-        this.numberOfProjects = numberOfProjects;
-    }
-
-
-    public void setNumberOfExams(int numberOfExams) {
-        this.numberOfExams = numberOfExams;
-    }
-
-    public String getClassNumber() {
-        return classNumber;
-    }
-
-    public void setClassNumber(String classNumber) {
-        this.classNumber = classNumber;
-    }
 }

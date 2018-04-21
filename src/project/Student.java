@@ -1,7 +1,5 @@
 package project;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class Student<T>{
@@ -16,9 +14,9 @@ public class Student<T>{
     protected int midtermExamScore;
     protected int finalExamScore;
     protected int totalScore;
-    protected int quizScore;
-    protected int particScore;
-    protected int extraScore;
+//    protected int quizScore;
+//    protected int particScore;
+//    protected int extraScore;
     protected float hwAvg;
     protected float totalWeightedScore;
     protected char grade;
@@ -51,9 +49,9 @@ public class Student<T>{
         this.midtermExamScore = midtermExamScore;
         this.finalExamScore = finalExamScore;
         this.totalScore = totalScore;
-        this.quizScore = 0;
-        this.particScore = 0;
-        this.extraScore = 0;
+//        this.quizScore = 0;
+//        this.particScore = 0;
+//        this.extraScore = 0;
         this.totalWeightedScore = 0;
         this.grade = '\0';
 
@@ -188,14 +186,7 @@ public class Student<T>{
     public String toString() {
             return String.format("%5s %4d %15s %10s %10d %7.2f %6d %6d %6d %6d %6c", classNumber, siteNumber, lastName, firstName, sid, hwAvg, totalProjectScore, midtermExamScore, finalExamScore, totalScore, grade);
         }
-        //Last name, first name, SID, Site, homework average, project, midterm, final, total score, Grad
 
-
-//    //second toString method to print a different subset of params
-//    public String toString() {
-//        return String.format("%15s %10s %10d", lastName, firstName, sid);
-//        //Last name, first name, SID
-//    }
 
     //asc - ascending; desc - descending
     //sorting for menu 4.2 in the order: Class asc/Site asc/Last name asc
@@ -291,53 +282,5 @@ public class Student<T>{
             return order;
         }
     }
-
-//    //method to search student by first name
-//    public T searchFirstName(){
-//
-//        return
-//    }//end of searchFirstName method
-//
-//    //method to search student by last name
-//    public T searchLastName(){
-//
-//        return
-//    }//end of searchLastName method
-//
-//    //method to search student by sid
-//    public T searchSid(){
-//
-//        return
-//    }//end of sid method
-//
-//    //method to sort students by last name
-//    public T sortByLastName(){
-//
-//        return
-//    }//end of sortByLastName method
-//
-//    //method to sort students by total Score
-//    public T sortByTotalScore(){
-//
-//        return
-//    }//end of sortByTotalScore method
-//
-//    //method to sort students by HW avg
-//    public T sortByHwAvg(){
-//
-//        return
-//    }//end of sortByHwAvg method
-//
-//    //method to sort students by project score
-//    public T sortByProjectScore(){
-//
-//        return
-//    }//end of sortByProjectScore method
-//
-//    //method to sort students by grade
-//    public T sortByGrade(){
-//
-//        return
-//    }//end of sortByGrade method
 
 }
