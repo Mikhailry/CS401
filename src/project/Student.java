@@ -202,27 +202,27 @@ public class Student<T>{
     static class SortByLastName implements Comparator<Student> {
         public int compare(Student a, Student b) {
             //first compare by class number
-            int order = a.classNumber.compareTo(b.classNumber);
+            int order = a.classNumber.compareToIgnoreCase(b.classNumber);
             if (order == 0) {
                 order = a.siteNumber-b.siteNumber;
                 if (order == 0) {
-                    order = a.lastName.compareTo(b.lastName);
+                    order = a.lastName.compareToIgnoreCase(b.lastName);
                 }
             }
             return order;
         }
     }
 
-    //sorting for menu 4.3 in the order: Class asc, TS desc, site asc, Last name asc
+    //sorting for menu 4.3 in the order: TS desc, site asc, Last name asc
     static class SortByTotalScore implements Comparator<Student> {
         public int compare(Student a, Student b) {
-            int order = a.classNumber.compareTo(b.classNumber);
-            if (order == 0) {
-                order = (a.totalScore - b.totalScore)*(-1);
+            int order = a.classNumber.compareToIgnoreCase(b.classNumber);
+            if (order==0) {
+                order = (a.totalScore - b.totalScore) * (-1);
                 if (order == 0) {
                     order = a.siteNumber - b.siteNumber;
                     if (order == 0) {
-                        order = a.lastName.compareTo(b.lastName);
+                        order = a.lastName.compareToIgnoreCase(b.lastName);
                     }
                 }
             }
@@ -230,16 +230,17 @@ public class Student<T>{
         }
     }
 
-    //sorting for menu 4.4 in the order: Class asc, HWavg desc, site asc, Last name asc
+    //sorting for menu 4.4 in the order: HWavg desc, site asc, Last name asc
     static class SortByHwAvg implements Comparator<Student> {
         public int compare(Student a, Student b) {
-            int order = a.classNumber.compareTo(b.classNumber);
-            if (order == 0) {
-                order = (int) ((a.hwAvg - b.hwAvg)*(-1));
+            int order = a.classNumber.compareToIgnoreCase(b.classNumber);
+            if (order==0) {
+                order = Double.compare(a.hwAvg, b.hwAvg) * (-1);
                 if (order == 0) {
                     order = a.siteNumber - b.siteNumber;
+
                     if (order == 0) {
-                        order = a.lastName.compareTo(b.lastName);
+                        order = a.lastName.compareToIgnoreCase(b.lastName);
                     }
                 }
             }
@@ -247,16 +248,16 @@ public class Student<T>{
         }
     }
 
-    //sorting for menu 4.5 in the order: Class asc, Project score desc, site asc, Last name asc
+    //sorting for menu 4.5 in the order: Project score desc, site asc, Last name asc
     static class SortByProjScore implements Comparator<Student> {
         public int compare(Student a, Student b) {
-            int order = a.classNumber.compareTo(b.classNumber);
-            if (order == 0) {
-                order = (a.totalProjectScore - b.totalProjectScore)*(-1);
+            int order = a.classNumber.compareToIgnoreCase(b.classNumber);
+            if (order==0) {
+                order = (a.totalProjectScore - b.totalProjectScore) * (-1);
                 if (order == 0) {
                     order = a.siteNumber - b.siteNumber;
                     if (order == 0) {
-                        order = a.lastName.compareTo(b.lastName);
+                        order = a.lastName.compareToIgnoreCase(b.lastName);
                     }
                 }
             }
@@ -268,9 +269,9 @@ public class Student<T>{
     //sorting for menu 4.6 in the order of grades (from A to E) and per course
     static class SortByGradeDesc implements Comparator<Student> {
         public int compare(Student a, Student b) {
-            int order = a.grade-b.grade;
+            int order = a.classNumber.compareToIgnoreCase(b.classNumber);
             if (order == 0) {
-                order = a.classNumber.compareTo(b.classNumber);
+                order = a.grade-b.grade;
             }
             return order;
         }
@@ -280,9 +281,9 @@ public class Student<T>{
     static class SortByLFS implements Comparator<Student> {
         public int compare(Student a, Student b) {
             //first compare by last name
-            int order = a.lastName.compareTo(b.lastName);
+            int order = a.lastName.compareToIgnoreCase(b.lastName);
             if (order == 0) {
-                order = a.firstName.compareTo(b.firstName);
+                order = a.firstName.compareToIgnoreCase(b.firstName);
                 if (order == 0) {
                     order = a.siteNumber-b.siteNumber;
                 }

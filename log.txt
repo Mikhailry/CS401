@@ -1,0 +1,317 @@
+
+Welcome to the GPAMS (Grade Point Average Management) system
+[1] Roster creation
+[2] Grade input
+[3] Record search
+[4] Show list
+[5] Create Travelling list
+[6] Exit
+
+Enter your choice: 
+How do you want to create roster?
+[1] Manual data feed
+[2] Default settings
+[3] Back to main menu
+
+Enter your choice: Creating a default roster
+-------------------------
+Please, enter the class number, e.g. 'CS401' :
+Roster cs401 with default settings has been created
+Number of sites: 3
+Number of students per site 01: 10
+Number of students per site 02: 5
+Number of students per site 03: 5
+Total class size: 20
+Number of assignments: 12
+Number of projects: 1
+Number of exams: 2
+
+
+How do you want to create roster?
+[1] Manual data feed
+[2] Default settings
+[3] Back to main menu
+
+Enter your choice: Creating a default roster
+-------------------------
+Please, enter the class number, e.g. 'CS401' :
+Roster cs425 with default settings has been created
+Number of sites: 3
+Number of students per site 01: 10
+Number of students per site 02: 5
+Number of students per site 03: 5
+Total class size: 20
+Number of assignments: 12
+Number of projects: 1
+Number of exams: 2
+
+
+How do you want to create roster?
+[1] Manual data feed
+[2] Default settings
+[3] Back to main menu
+
+Enter your choice: Creating a roster
+-----------------
+Please, enter the class number, e.g. 'CS401' :
+Enter number of sites:Please enter the number of students per site 01 :
+Please enter the number of assignments :
+Please enter the number of projects :
+Enter number of exams:
+How do you want to create roster?
+[1] Manual data feed
+[2] Default settings
+[3] Back to main menu
+
+Enter your choice: 
+Welcome to the GPAMS (Grade Point Average Management) system
+[1] Roster creation
+[2] Grade input
+[3] Record search
+[4] Show list
+[5] Create Travelling list
+[6] Exit
+
+Enter your choice: 
+How do you want to input grades?
+[1] From file
+[2] Grade input
+[3] Back to main menu
+
+Enter your choice: You are in the directory = /Users/mikhailrybalchenko/IdeaProjects/cs401_lab1
+Please specify a path and filename with grades: 
+Grades have been added.
+
+
+How do you want to input grades?
+[1] From file
+[2] Grade input
+[3] Back to main menu
+
+Enter your choice: 
+Welcome to the GPAMS (Grade Point Average Management) system
+[1] Roster creation
+[2] Grade input
+[3] Record search
+[4] Show list
+[5] Create Travelling list
+[6] Exit
+
+Enter your choice: 
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: Setting grade items weight by class
+Total weight should sum-up to 100%
+-----------------
+Please, enter the class number, e.g. 'CS401' :
+Please enter weight of assignments in the total grade, e.g. '20' :
+Please enter weight of projects in the total grade, e.g. '20'  :
+Please enter weight of midterm exam in the total grade, e.g. '30'  :
+Please enter weight of final exam in the total grade, e.g. '30'  :
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: Setting grade items weight by class
+Total weight should sum-up to 100%
+-----------------
+Please, enter the class number, e.g. 'CS401' :
+Please enter weight of assignments in the total grade, e.g. '20' :
+Please enter weight of projects in the total grade, e.g. '20'  :
+Please enter weight of midterm exam in the total grade, e.g. '30'  :
+Please enter weight of final exam in the total grade, e.g. '30'  :
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: Setting grade items weight by class
+Total weight should sum-up to 100%
+-----------------
+Please, enter the class number, e.g. 'CS401' :
+Please enter weight of assignments in the total grade, e.g. '20' :
+Please enter weight of projects in the total grade, e.g. '20'  :
+Please enter weight of final exam in the total grade, e.g. '30'  :
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: ---------------------------------------------------------
+CLASS  SITE       LAST NAME FIRST NAME  TOTAL
+---------------------------------------------------------
+CS401    1      Schumacher    Michael    317
+CS401    3      Schumacher    Michael    308
+CS401    1        Doberman        Zak    307
+CS401    1          Jordan    Michael    306
+CS401    1          Jordan     Parker    306
+CS401    3        Crawford      Cindy    287
+CS401    3      Mustermann        Max    278
+CS425    1        Doberman        Mak    307
+CS525    1           Gupta    Ranjani    129
+
+---------------------------------------------------------
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: ---------------------------------------------------------
+CLASS  SITE       LAST NAME FIRST NAME  HW AVG
+---------------------------------------------------------
+CS401    1        Doberman        Zak    9.00
+CS401    1          Jordan    Michael    8.75
+CS401    1          Jordan     Parker    8.75
+CS401    1      Schumacher    Michael    8.75
+CS401    3      Schumacher    Michael    8.75
+CS401    3        Crawford      Cindy    7.92
+CS401    3      Mustermann        Max    7.92
+CS425    1        Doberman        Mak    9.00
+CS525    1           Gupta    Ranjani    9.50
+
+---------------------------------------------------------
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: ---------------------------------------------------------
+CLASS  SITE       LAST NAME FIRST NAME PROJECT
+---------------------------------------------------------
+CS401    3      Schumacher    Michael     20
+CS401    3      Mustermann        Max     19
+CS401    1          Jordan    Michael     18
+CS401    1          Jordan     Parker     18
+CS401    1      Schumacher    Michael     18
+CS401    1        Doberman        Zak     15
+CS401    3        Crawford      Cindy     10
+CS425    1        Doberman        Mak     15
+CS525    1           Gupta    Ranjani     10
+
+---------------------------------------------------------
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: --------------------------------------------------------------
+CLASS  SITE       LAST NAME FIRST NAME  GRADE TOTAL SCORE(W)
+--------------------------------------------------------------
+CS401    3      Schumacher    Michael      A   92.40
+CS401    1          Jordan    Michael      A   90.40
+CS401    1          Jordan     Parker      A   90.40
+CS401    1      Schumacher    Michael      A   93.70
+CS401    3      Mustermann        Max      B   84.03
+CS401    1        Doberman        Zak      B   88.20
+CS401    3        Crawford      Cindy      B   80.43
+CS425    1        Doberman        Mak      B   88.20
+CS525    1           Gupta    Ranjani      B   89.00
+
+--------------------------------------------------------------
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: ---------------------------------------------------------
+CLASS  SITE       LAST NAME FIRST NAME PROJECT
+---------------------------------------------------------
+CS401    3      Schumacher    Michael     20
+CS401    3      Mustermann        Max     19
+CS401    1          Jordan    Michael     18
+CS401    1          Jordan     Parker     18
+CS401    1      Schumacher    Michael     18
+CS401    1        Doberman        Zak     15
+CS401    3        Crawford      Cindy     10
+CS425    1        Doberman        Mak     15
+CS525    1           Gupta    Ranjani     10
+
+---------------------------------------------------------
+
+Please make your choice: 
+[1] Scoring weight by item
+[2] Sorted list by last name per class
+[3] Rankings by total score per class
+[4] Rankings by homework average per class
+[5] Ranking by project score per class
+[6] Ranking by Grade
+[7] Back to main menu
+
+Enter your choice: 
+Welcome to the GPAMS (Grade Point Average Management) system
+[1] Roster creation
+[2] Grade input
+[3] Record search
+[4] Show list
+[5] Create Travelling list
+[6] Exit
+
+Enter your choice: Here is the list :
+  Schumacher    Michael   3 ->   Mustermann        Max   3 ->       Jordan    Michael   1 ->       Jordan     Parker   1 ->   Schumacher    Michael   1 ->     Doberman        Zak   1 ->     Crawford      Cindy   3 ->     Doberman        Mak   1 ->        Gupta    Ranjani   1 -> 
+
+Current location is :
+Schumacher Michael 3
+
+How far and which direction do you want to travel in the list?
+e.g. input '3' to move 3 students FORWARD in the list
+input '-3' to move 3 students BACKWARDS in the list
+to exit input '0' 
+Sorry, index is out of scope
+
+How far and which direction do you want to travel in the list?
+e.g. input '3' to move 3 students FORWARD in the list
+input '-3' to move 3 students BACKWARDS in the list
+to exit input '0' 
+
+Welcome to the GPAMS (Grade Point Average Management) system
+[1] Roster creation
+[2] Grade input
+[3] Record search
+[4] Show list
+[5] Create Travelling list
+[6] Exit
+
+Enter your choice: Exiting application
