@@ -861,15 +861,8 @@ public class Console {
                             totalW = hwW + projectW + midtermExamW + finalExamW;
                             if (totalW == 100) {
                                 weightIncomplete = false;
-                            } else if (totalW > 100) {
-                                System.out.println("Total number of weights is bigger than 100%. Please try again.");
-
-                            } else if (totalW < 100 && totalW > 0) {
-                                System.out.println("Total number of weights is less than 100%. Please try again.");
-
-                            } else if (totalW <= 0) {
-                                System.out.println("Total number of weights is less or equal than 0. Please try again.");
-
+                            } else {
+                                System.out.println("Total number of weights is not equal 100%. Please try again.");
                             }
 
                             /*
