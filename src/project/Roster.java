@@ -55,4 +55,11 @@ public class Roster {
         this.classNumber = classNumber;
     }
 
+    public String getClassNumber() {
+        return classNumber;
+    }
+
+    public void setClassNumber(String classNumber) {
+        this.classNumber = classNumber;
+    }
 }

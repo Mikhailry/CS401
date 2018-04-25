@@ -574,15 +574,20 @@ public class Console {
                             student1.setSiteNumber(input3.nextInt());
 
                             //get number of HWs, projects and exams for that class
+                            boolean classFound = false;
                             for (int r = 0; r < rosters.size(); r++) {
-                                if (rosters.get(r).classNumber.equalsIgnoreCase(student1.getClassNumber())) {
+                                if (rosters.get(r).getClassNumber().equalsIgnoreCase(student1.getClassNumber())) {
+                                    System.out.println(rosters.get(r).getClassNumber());
                                     numberOfHW = rosters.get(r).numberOfAssignments;
                                     numberOfPr = rosters.get(r).numberOfProjects;
                                     numberOfEx = rosters.get(r).numberOfExams;
-                                } else {
-                                    System.out.println("There is no such class. Please create roster from menu [1]");
-                                    return console.showMainMenu(console);
+                                    classFound=true;
                                 }
+                            }
+
+                            if (!classFound) {
+                                System.out.println("There is no such class. Please create roster from menu [1]");
+                                return console.showMainMenu(console);
                             }
 
                             //input HW scores and add them to an array
